@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/loginFragment"
+    android:id="@+id/onborading_graph">
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.rantish.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_enterEmailFragment"
+            app:destination="@id/enterEmailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.example.rantish.login.SignUpFragment"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" >
+        <action
+            android:id="@+id/action_signUpFragment_to_verificationSuccessFragment"
+            app:destination="@id/verificationSuccessFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/enterEmailFragment"
+        android:name="com.example.rantish.login.EnterEmailFragment"
+        android:label="fragment_enter_email"
+        tools:layout="@layout/fragment_enter_email" >
+        <action
+            android:id="@+id/action_enterEmailFragment_to_verificationSuccessFragment"
+            app:destination="@id/verificationSuccessFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/verificationSuccessFragment"
+        android:name="com.example.rantish.login.VerificationSuccessFragment"
+        android:label="fragment_verification_success"
+        tools:layout="@layout/fragment_verification_success" />
+</navigation>
