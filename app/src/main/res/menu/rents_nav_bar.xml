@@ -4,17 +4,17 @@
         android:id="@+id/home"
         android:title="@string/home"
         android:enabled="true"
-        android:icon="@drawable/vector_ic"/>
+        android:icon="@drawable/ic_home"/>
     <item
-        android:id="@+id/notification"
+        android:id="@+id/person"
         android:title="@string/notification"
-        android:icon="@drawable/ic_bell"/>
+        android:icon="@drawable/ic_blueperson"/>
     <item
-        android:id="@+id/favourite"
+        android:id="@+id/doller"
         android:title="@string/favourite"
-        android:icon="@drawable/black_heart"/>
+        android:icon="@drawable/ic_doller"/>
     <item
-        android:id="@+id/schedule"
+        android:id="@+id/chagt"
         android:title="@string/schedule"
-        android:icon="@drawable/ic_calander"/>
+        android:icon="@drawable/group_104"/>
 </menu>
