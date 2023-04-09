@@ -1,12 +1,13 @@
 package com.example.rantish.api.Response.GetCartResponse
 
 
-import kotlinx.serialization.SerialName
-import kotlinx.serialization.Serializable
+import com.google.gson.annotations.Expose
+import com.google.gson.annotations.SerializedName
 
-@Serializable
+
+
 data class Cart(
-    @SerialName("items")
+    @SerializedName("items")
     @Expose
     var items: List<Item>
 )

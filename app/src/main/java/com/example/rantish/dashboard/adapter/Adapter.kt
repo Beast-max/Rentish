@@ -8,7 +8,6 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.constraintlayout.widget.ConstraintSet.Constraint
 import androidx.recyclerview.widget.RecyclerView
 import com.example.rantish.R
-import kotlinx.android.synthetic.main.car_item_layout.view.*
 
 class Adapter(val mList: List<String>,val type:Int,val listner:onclick): RecyclerView.Adapter<Adapter.ViewHolder>() {
 

@@ -1,15 +1,14 @@
 package com.example.rantish.api.Response.GetCartResponse
 
+import com.google.gson.annotations.Expose
+import com.google.gson.annotations.SerializedName
 
-import kotlinx.serialization.SerialName
-import kotlinx.serialization.Serializable
 
-@Serializable
 data class Phonenumber(
-    @SerialName("isVer")
+    @SerializedName("isVer")
     @Expose
     var isVer: Boolean,
-    @SerialName("value")
+    @SerializedName("value")
     @Expose
     var value: String
 )

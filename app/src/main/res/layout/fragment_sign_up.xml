@@ -81,7 +81,7 @@
             android:layout_marginStart="12dp"
             android:layout_marginTop="12dp"
             android:layout_marginEnd="12dp"
-            android:hint="@string/email"
+            android:hint="Password"
             app:hintTextColor="@color/white"
             app:boxCornerRadiusBottomEnd="16dp"
             app:boxCornerRadiusTopStart="16dp"

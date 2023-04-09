@@ -1,54 +1,53 @@
 package com.example.rantish.api.Response.GetCartResponse
 
+import com.google.gson.annotations.Expose
+import com.google.gson.annotations.SerializedName
 
-import kotlinx.serialization.SerialName
-import kotlinx.serialization.Serializable
 
-@Serializable
 data class ProductId(
-    @SerialName("categoryy")
+    @SerializedName("categoryy")
     @Expose
     var categoryy: String,
-    @SerialName("costprice")
+    @SerializedName("costprice")
     @Expose
     var costprice: String,
-    @SerialName("coupon")
+    @SerializedName("coupon")
     @Expose
     var coupon: List<Any>,
-    @SerialName("createdAt")
+    @SerializedName("createdAt")
     @Expose
     var createdAt: String,
-    @SerialName("deposit")
+    @SerializedName("deposit")
     @Expose
     var deposit: Int,
-    @SerialName("description")
+    @SerializedName("description")
     @Expose
     var description: String,
-    @SerialName("_id")
+    @SerializedName("_id")
     @Expose
     var id: String,
-    @SerialName("image")
+    @SerializedName("image")
     @Expose
     var image: List<String>,
-    @SerialName("manufacturer")
+    @SerializedName("manufacturer")
     @Expose
     var manufacturer: String,
-    @SerialName("name")
+    @SerializedName("name")
     @Expose
     var name: String,
-    @SerialName("onrent")
+    @SerializedName("onrent")
     @Expose
     var onrent: Boolean,
-    @SerialName("quantity")
+    @SerializedName("quantity")
     @Expose
     var quantity: Int,
-    @SerialName("rentalprice")
+    @SerializedName("rentalprice")
     @Expose
     var rentalprice: Int,
-    @SerialName("updatedAt")
+    @SerializedName("updatedAt")
     @Expose
     var updatedAt: String,
-    @SerialName("__v")
+    @SerializedName("__v")
     @Expose
     var v: Int
 )

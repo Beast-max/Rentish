@@ -14,7 +14,7 @@ import com.example.rantish.api.Request.SignUprequest
 import com.example.rantish.databinding.FragmentSignUpBinding
 import com.example.rantish.viewmodel.MainViewModel
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.android.synthetic.main.fragment_sign_up.view.*
+
 
 @AndroidEntryPoint
 class SignUpFragment : Fragment() {
@@ -36,12 +36,16 @@ class SignUpFragment : Fragment() {
             viewModel.signup(binding.txtEmail.toString(),binding.txtName.toString(),binding.txtPassword.toString()
                 ,binding.txtPhone.toString(),binding.txtAddress.toString())
         }
+        observerViewModel()
         return binding.root
     }
 
     fun observerViewModel(){
         viewModel.signUpLiveData.observe(viewLifecycleOwner, Observer {
-            if()
+            if(it.type=="success"){
+                  findNavController().navigate(R.id.action_signUpFragment_to_verificationSuccessFragment)
+
+            }
 
         })
     }

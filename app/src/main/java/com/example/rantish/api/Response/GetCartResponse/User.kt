@@ -1,42 +1,41 @@
 package com.example.rantish.api.Response.GetCartResponse
 
+import com.google.gson.annotations.Expose
+import com.google.gson.annotations.SerializedName
 
-import kotlinx.serialization.SerialName
-import kotlinx.serialization.Serializable
 
-@Serializable
 data class User(
-    @SerialName("address")
+    @SerializedName("address")
     @Expose
     var address: String,
-    @SerialName("cart")
+    @SerializedName("cart")
     @Expose
     var cart: Cart,
-    @SerialName("email")
+    @SerializedName("email")
     @Expose
     var email: Email,
-    @SerialName("favouriteProducts")
+    @SerializedName("favouriteProducts")
     @Expose
     var favouriteProducts: FavouriteProducts,
-    @SerialName("_id")
+    @SerializedName("_id")
     @Expose
     var id: String,
-    @SerialName("password")
+    @SerializedName("password")
     @Expose
     var password: String,
-    @SerialName("phonenumber")
+    @SerializedName("phonenumber")
     @Expose
     var phonenumber: Phonenumber,
-    @SerialName("scope")
+    @SerializedName("scope")
     @Expose
     var scope: String,
-    @SerialName("username")
+    @SerializedName("username")
     @Expose
     var username: String,
-    @SerialName("__v")
+    @SerializedName("__v")
     @Expose
     var v: Int,
-    @SerialName("validation")
+    @SerializedName("validation")
     @Expose
     var validation: Validation
 )

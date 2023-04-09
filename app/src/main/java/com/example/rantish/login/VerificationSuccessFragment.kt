@@ -8,22 +8,23 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.rantish.MainActivity
 import com.example.rantish.R
-import kotlinx.android.synthetic.main.fragment_verification_success.*
-import kotlinx.android.synthetic.main.fragment_verification_success.view.*
+import com.example.rantish.databinding.FragmentHomeBinding
+import com.example.rantish.databinding.FragmentVerificationSuccessBinding
 
 
 class VerificationSuccessFragment : Fragment() {
+    private lateinit var binding: FragmentVerificationSuccessBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view =  inflater.inflate(R.layout.fragment_verification_success, container, false)
-            view.materialButton.setOnClickListener {
+        binding = FragmentVerificationSuccessBinding.inflate(layoutInflater)
+        binding.materialButton.setOnClickListener {
             val intent = Intent(requireContext(),MainActivity::class.java)
             startActivity(intent)
         }
-        return view
+        return binding.root
     }
 }

@@ -7,10 +7,11 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.rantish.R
 import com.example.rantish.dashboard.adapter.Adapter
-import kotlinx.android.synthetic.main.fragment_notification.view.*
+import com.example.rantish.databinding.FragmentNotificationBinding
+
 
 class NotificationFragment : Fragment(),Adapter.onclick {
-
+    private lateinit var binding:FragmentNotificationBinding
     var list2 = mutableListOf<String>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,7 +24,7 @@ class NotificationFragment : Fragment(),Adapter.onclick {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view =  inflater.inflate(R.layout.fragment_notification, container, false)
+        binding = FragmentNotificationBinding.inflate(layoutInflater)
         list2.add("New information :   designs on Dribbble.\n" +
                 " Your resource to discover")
         list2.add("New information :   designs on Dribbble.\n" +
@@ -38,8 +39,8 @@ class NotificationFragment : Fragment(),Adapter.onclick {
                 " Your resource to discover")
         list2.add("New information :   designs on Dribbble.\n" +
                 " Your resource to discover")
-        view.noti.adapter = Adapter(list2,3,this)
-        return view
+        binding.noti.adapter = Adapter(list2,3,this)
+        return binding.root
     }
 
     override fun onclick() {

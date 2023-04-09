@@ -8,20 +8,19 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.rantish.R
 import com.example.rantish.dashboard.adapter.Adapter
-import kotlinx.android.synthetic.main.fragment_home.*
-import kotlinx.android.synthetic.main.fragment_home.view.*
+import com.example.rantish.databinding.FragmentHomeBinding
 
 
 class HomeFragment : Fragment(),Adapter.onclick {
-
+    private lateinit var binding:FragmentHomeBinding
     var list = mutableListOf<String>()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view =  inflater.inflate(R.layout.fragment_home, container, false)
-        view.imageView9.setOnClickListener {
+      binding = FragmentHomeBinding.inflate(layoutInflater)
+        binding.imageView9.setOnClickListener {
             findNavController().navigate(R.id.action_home_to_profileFragment)
         }
         list.add("audi")
@@ -36,9 +35,9 @@ class HomeFragment : Fragment(),Adapter.onclick {
 
 
 
-        view.recycler.adapter = Adapter(list,0,this)
-        view.cate.adapter =  Adapter(list,1,this)
-        return view
+        binding.recycler.adapter = Adapter(list,0,this)
+        binding.cate.adapter =  Adapter(list,1,this)
+        return binding.root
     }
 
     override fun onclick() {
