@@ -49,6 +49,7 @@
         android:layout_marginTop="12dp"
         android:layout_marginEnd="12dp"
         android:hint="@string/email"
+
         app:boxCornerRadiusBottomEnd="16dp"
         app:boxCornerRadiusTopStart="16dp"
         app:boxStrokeColor="@color/focuse_color_selector"
@@ -60,6 +61,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/txt_email"
             android:layout_width="match_parent"
+            android:textColor="@color/white"
             android:layout_height="match_parent"
             android:drawableEnd="@drawable/enter_email" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -83,6 +85,7 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/txt_password"
+            android:textColor="@color/white"
             android:drawableEnd="@drawable/key_off"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
@@ -95,7 +98,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:text="Forget Password?"
-        android:textColor="@color/red"
+        android:textColor="@color/white"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/enter_password" />

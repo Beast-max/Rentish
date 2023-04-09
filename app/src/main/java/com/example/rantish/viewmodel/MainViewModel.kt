@@ -7,6 +7,7 @@ import androidx.lifecycle.viewModelScope
 import com.example.rantish.api.Request.LoginRequest
 import com.example.rantish.api.Request.SignUprequest
 import com.example.rantish.api.Response.LoginResponse.LoginResponse
+import com.example.rantish.api.Response.PostResponse
 import com.example.rantish.api.Response.SignUpResponse.SignUpResponse
 import com.example.rantish.repository.LoginRepoitory
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -17,7 +18,7 @@ import javax.inject.Inject
 class MainViewModel @Inject constructor(val repo:LoginRepoitory):ViewModel() {
      val signUpLiveData = MutableLiveData<SignUpResponse>()
      val loginLiveData = MutableLiveData<LoginResponse>()
-    
+    val allProduct = MutableLiveData<PostResponse>()
 
     fun signup(email:String,username:String,password:String,phonenumber:String,address:String) = viewModelScope.launch {
         val request = SignUprequest(address,email,password,phonenumber,"user",username)
@@ -31,6 +32,12 @@ class MainViewModel @Inject constructor(val repo:LoginRepoitory):ViewModel() {
         Log.d("request_login",loginRequest.toString())
         if(response.code()==200){
             loginLiveData.postValue(response.body())
+        }
+    }
+    fun getAllProduct() = viewModelScope.launch {
+        val response = repo.getProduct()
+        if(response.code()==200){
+            allProduct.postValue(response.body())
         }
     }
 }
