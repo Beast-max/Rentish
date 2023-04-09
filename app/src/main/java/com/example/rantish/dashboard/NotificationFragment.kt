@@ -12,12 +12,7 @@ import com.example.rantish.databinding.FragmentNotificationBinding
 
 class NotificationFragment : Fragment(),Adapter.onclick {
     private lateinit var binding:FragmentNotificationBinding
-    var list2 = mutableListOf<String>()
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -25,21 +20,6 @@ class NotificationFragment : Fragment(),Adapter.onclick {
     ): View? {
         // Inflate the layout for this fragment
         binding = FragmentNotificationBinding.inflate(layoutInflater)
-        list2.add("New information :   designs on Dribbble.\n" +
-                " Your resource to discover")
-        list2.add("New information :   designs on Dribbble.\n" +
-                " Your resource to discover")
-        list2.add("New information :   designs on Dribbble.\n" +
-                " Your resource to discover")
-        list2.add("New information :   designs on Dribbble.\n" +
-                " Your resource to discover")
-        list2.add("New information :   designs on Dribbble.\n" +
-                " Your resource to discover")
-        list2.add("New information :   designs on Dribbble.\n" +
-                " Your resource to discover")
-        list2.add("New information :   designs on Dribbble.\n" +
-                " Your resource to discover")
-        binding.noti.adapter = Adapter(list2,3,this)
         return binding.root
     }
 

@@ -31,6 +31,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:text="Title"
+            android:maxLength="15"
             android:textColor="#CFD2CF"
             android:textSize="16dp"
             app:layout_constraintStart_toEndOf="@+id/imageView12"
@@ -48,13 +49,16 @@
 
         <TextView
             android:id="@+id/textView22"
-            android:layout_width="wrap_content"
+            android:layout_width="194dp"
             android:layout_height="wrap_content"
+
             android:layout_marginStart="4dp"
+            android:layout_marginTop="2dp"
+            android:maxLength="100"
+            android:singleLine="false"
             android:text="Lorem Ipsum has been the industry's \n
 standard dummy text ever since the \n
 1500s, when an unknown printer took "
-            android:layout_marginTop="2dp"
             android:textColor="@color/white"
             android:textSize="12dp"
             app:layout_constraintStart_toStartOf="parent"

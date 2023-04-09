@@ -8,8 +8,10 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.constraintlayout.widget.ConstraintSet.Constraint
 import androidx.recyclerview.widget.RecyclerView
 import com.example.rantish.R
+import com.example.rantish.api.Response.Data
+import org.w3c.dom.Text
 
-class Adapter(val mList: List<String>,val type:Int,val listner:onclick): RecyclerView.Adapter<Adapter.ViewHolder>() {
+class Adapter(val mList: List<Data>,val type:Int,val listner:onclick): RecyclerView.Adapter<Adapter.ViewHolder>() {
 
     // create new views
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -38,7 +40,9 @@ class Adapter(val mList: List<String>,val type:Int,val listner:onclick): Recycle
         // sets the image to the imageview from our itemHolder class
 
         // sets the text to the textview from our itemHolder class
-        holder.title.text = ItemsViewModel
+        holder.title.text = ItemsViewModel.name
+        holder.disc.text = ItemsViewModel.description
+        holder.price.text = "Rs. ${ItemsViewModel.rentalprice}"
         holder.root.setOnClickListener {
             listner.onclick()
         }
@@ -53,6 +57,8 @@ class Adapter(val mList: List<String>,val type:Int,val listner:onclick): Recycle
     class ViewHolder(ItemView: View) : RecyclerView.ViewHolder(ItemView) {
         val title: TextView = itemView.findViewById(R.id.title)
         val root:ConstraintLayout = itemView.findViewById(R.id.root)
+        val disc:TextView = itemView.findViewById<TextView>(R.id.textView22)
+        val price:TextView = itemView.findViewById<TextView>(R.id.textView23)
     }
     interface onclick{
         fun onclick()
