@@ -4,6 +4,7 @@ import com.example.rantish.api.Request.AddCartRequest
 import com.example.rantish.api.Request.LoginRequest
 import com.example.rantish.api.Request.SignUprequest
 import com.example.rantish.api.Response.CartResponse.AddToCartResponse
+import com.example.rantish.api.Response.GetUser.GetUserResponse
 import com.example.rantish.api.Response.LoginResponse.LoginResponse
 import com.example.rantish.api.Response.PostResponse
 import com.example.rantish.api.Response.SignUpResponse.SignUpResponse
@@ -28,4 +29,7 @@ class LoginRepoitory(
         return loginService.addProduct(AddCartRequest(id))
     }
 
+    suspend fun getUser():Response<GetUserResponse>{
+        return loginService.getUser()
+    }
 }

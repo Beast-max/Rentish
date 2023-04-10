@@ -1,15 +1,18 @@
 package com.example.rantish.api.Service
 
 import com.example.rantish.api.Request.AddCartRequest
+import com.example.rantish.api.Request.CheckoutResponse
 import com.example.rantish.api.Request.LoginRequest
 import com.example.rantish.api.Request.SignUprequest
 import com.example.rantish.api.Response.CartResponse.AddToCartResponse
 import com.example.rantish.api.Response.CartResponse.RemoveProductResponse
+import com.example.rantish.api.Response.GetUser.GetUserResponse
 import com.example.rantish.api.Response.LoginResponse.LoginResponse
 import com.example.rantish.api.Response.PostResponse
 import com.example.rantish.api.Response.SignUpResponse.SignUpResponse
 import retrofit2.Response
 import retrofit2.http.Body
+import retrofit2.http.Headers
 import retrofit2.http.POST
 
 interface LoginService {
@@ -27,5 +30,12 @@ interface LoginService {
 
     @POST("app/v1/user/removecart")
     suspend fun removeProductCart(@Body request: AddCartRequest):Response<RemoveProductResponse>
+
+//    @POST("/app/v1/pay-order")
+//    suspend fun checkOut(@Body request:CheckoutResponse):Response<>
+
+    @Headers("Authorization")
+    @POST("/app/v1/user/get")
+    suspend fun getUser():Response<GetUserResponse>
 
 }

@@ -7,7 +7,7 @@
     android:background="@color/black"
     tools:context=".login.EnterEmailFragment">
 
-    <fragment
+    `<fragment
         android:id="@+id/fragment_container"
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"

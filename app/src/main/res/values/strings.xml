@@ -11,4 +11,6 @@
     <string name="notification">notification</string>
     <string name="home">Home</string>
     <string name="schedule">schedule</string>
+    <string name="choose_valid_id_proof">Choose Valid ID Proof</string>
+    <string name="documentation">Documentation</string>
 </resources>

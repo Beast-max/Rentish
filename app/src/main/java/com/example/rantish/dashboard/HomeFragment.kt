@@ -10,6 +10,7 @@ import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import com.example.rantish.R
 import com.example.rantish.dashboard.adapter.Adapter
+import com.example.rantish.dashboard.adapter.CategoriesAdapter
 import com.example.rantish.databinding.FragmentHomeBinding
 import com.example.rantish.viewmodel.MainViewModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -25,9 +26,24 @@ class HomeFragment : Fragment(),Adapter.onclick {
     ): View? {
         // Inflate the layout for this fragment
       binding = FragmentHomeBinding.inflate(layoutInflater)
+
         binding.imageView9.setOnClickListener {
             findNavController().navigate(R.id.action_home_to_profileFragment)
         }
+        val list = mutableListOf<String>()
+        list.add("dummy")
+        list.add("dummy")
+        list.add("dummy")
+        list.add("dummy")
+        list.add("dummy")
+        list.add("dummy")
+        list.add("dummy")
+        list.add("dummy")
+        list.add("dummy")
+
+        val adapter  = CategoriesAdapter()
+        binding.cate.adapter = adapter
+        adapter.submitList(list)
         viewModel.getAllProduct()
         observerViewModel()
         return binding.root
@@ -38,7 +54,7 @@ class HomeFragment : Fragment(),Adapter.onclick {
         })
     }
 
-    override fun onclick() {
-        findNavController().navigate(R.id.action_home_to_cartFragment)
+    override fun onclick(id:String) {
+        viewModel.addProduct(id)
     }
 }

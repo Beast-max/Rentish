@@ -44,8 +44,10 @@ class Adapter(val mList: List<Data>,val type:Int,val listner:onclick): RecyclerV
         holder.disc.text = ItemsViewModel.description
         holder.price.text = "Rs. ${ItemsViewModel.rentalprice}"
         holder.root.setOnClickListener {
-            listner.onclick()
+            listner.onclick(ItemsViewModel.id)
         }
+        holder.image.visibility =View.GONE
+
     }
 
     // return the number of the items in the list
@@ -57,10 +59,12 @@ class Adapter(val mList: List<Data>,val type:Int,val listner:onclick): RecyclerV
     class ViewHolder(ItemView: View) : RecyclerView.ViewHolder(ItemView) {
         val title: TextView = itemView.findViewById(R.id.title)
         val root:ConstraintLayout = itemView.findViewById(R.id.root)
-        val disc:TextView = itemView.findViewById<TextView>(R.id.textView22)
-        val price:TextView = itemView.findViewById<TextView>(R.id.textView23)
+        val disc:TextView = itemView.findViewById(R.id.textView22)
+        val price:TextView = itemView.findViewById(R.id.textView23)
+        val image:TextView = itemView.findViewById(R.id.imageView13)
+
     }
     interface onclick{
-        fun onclick()
+        fun onclick(id:String)
     }
 }
