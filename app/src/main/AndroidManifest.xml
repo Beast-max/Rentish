@@ -14,7 +14,7 @@
         android:theme="@style/Theme.Rantish"
         tools:targetApi="31">
         <activity
-            android:name=".RentsActivity"
+            android:name=".Rents.RentsActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

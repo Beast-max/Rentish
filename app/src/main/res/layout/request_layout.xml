@@ -54,7 +54,7 @@
         android:background="@drawable/blue_freelance_text"
         android:gravity="center"
         android:padding="10dp"
-        android:text="Apply"
+        android:text="Profile"
         android:textColor="@color/white"
         android:textSize="16dp"
         app:layout_constraintStart_toStartOf="parent"

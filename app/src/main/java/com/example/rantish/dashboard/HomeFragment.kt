@@ -1,5 +1,6 @@
 package com.example.rantish.dashboard
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -9,6 +10,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import com.example.rantish.R
+import com.example.rantish.Rents.RentsActivity
 import com.example.rantish.dashboard.adapter.Adapter
 import com.example.rantish.dashboard.adapter.CategoriesAdapter
 import com.example.rantish.databinding.FragmentHomeBinding
@@ -26,7 +28,11 @@ class HomeFragment : Fragment(),Adapter.onclick {
     ): View? {
         // Inflate the layout for this fragment
       binding = FragmentHomeBinding.inflate(layoutInflater)
+        binding.rents.setOnClickListener {
+            val intent = Intent(requireContext(),RentsActivity::class.java)
+            startActivity(intent)
 
+        }
         binding.imageView9.setOnClickListener {
             findNavController().navigate(R.id.action_home_to_profileFragment)
         }
@@ -55,6 +61,6 @@ class HomeFragment : Fragment(),Adapter.onclick {
     }
 
     override fun onclick(id:String) {
-        viewModel.addProduct(id)
+//        viewModel.addProduct(id)
     }
 }

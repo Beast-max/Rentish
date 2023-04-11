@@ -3,6 +3,7 @@ package com.example.rantish.dashboard.adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.constraintlayout.widget.ConstraintSet.Constraint
@@ -61,7 +62,7 @@ class Adapter(val mList: List<Data>,val type:Int,val listner:onclick): RecyclerV
         val root:ConstraintLayout = itemView.findViewById(R.id.root)
         val disc:TextView = itemView.findViewById(R.id.textView22)
         val price:TextView = itemView.findViewById(R.id.textView23)
-        val image:TextView = itemView.findViewById(R.id.imageView13)
+        val image:ImageView = itemView.findViewById(R.id.imageView13)
 
     }
     interface onclick{

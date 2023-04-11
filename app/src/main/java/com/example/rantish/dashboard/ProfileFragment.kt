@@ -30,7 +30,7 @@ class ProfileFragment : Fragment() {
         binding.personalTxt.setOnClickListener {
             binding.personal.visibility = View.VISIBLE
         }
-        binding.docs.setOnClickListener {
+        binding.doscLayout.setOnClickListener {
             binding.docs.visibility  = View.VISIBLE
             binding.personal.visibility = View.GONE
         }

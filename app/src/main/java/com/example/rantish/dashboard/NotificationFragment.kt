@@ -23,8 +23,10 @@ class NotificationFragment : Fragment(),Adapter.onclick {
         return binding.root
     }
 
-    override fun onclick() {
 
+
+    override fun onclick(id: String) {
+        TODO("Not yet implemented")
     }
 
 

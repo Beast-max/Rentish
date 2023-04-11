@@ -10,6 +10,7 @@ import androidx.activity.addCallback
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
+import com.example.rantish.Extensions.Token
 import com.example.rantish.R
 import com.example.rantish.api.Request.LoginRequest
 import com.example.rantish.databinding.FragmentEnterEmailBinding
@@ -45,6 +46,7 @@ class EnterEmailFragment : Fragment() {
         viewModel.loginLiveData.observe(viewLifecycleOwner, Observer {
             if(it.type=="success"){
                 findNavController().navigate(R.id.action_enterEmailFragment_to_verificationSuccessFragment)
+                Token.token = it.data.accessToken
             }
             else{
                 binding.progressBar.visibility  = View.VISIBLE

@@ -10,7 +10,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_marginTop="100dp"
-            android:layout_marginBottom="100dp"
+            android:layout_marginBottom="50dp"
             android:layout_marginEnd="16dp"
             android:layout_marginStart="16dp"
             android:background="@drawable/corner_radius"
@@ -34,10 +34,10 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="24dp"
                     android:layout_marginTop="10dp"
+                    android:textColor="@color/white"
                     android:layout_marginEnd="24dp"
                     android:background="@drawable/freelance_text"
                     android:padding="6dp"
-                    android:text="fef"
                     android:textSize="16dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -61,10 +61,11 @@
                     android:layout_height="147dp"
                     android:layout_marginStart="24dp"
                     android:layout_marginTop="10dp"
+                    android:textColor="@color/white"
+
                     android:layout_marginEnd="24dp"
                     android:background="@drawable/freelance_text"
                     android:padding="6dp"
-                    android:text="fef"
                     android:textSize="16dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -82,13 +83,15 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/disc" />
 
-                <TextView
+                <EditText
                     android:id="@+id/textView32"
                     android:layout_width="65dp"
                     android:layout_height="27dp"
-                    android:layout_marginStart="44dp"
+                    android:layout_marginStart="16dp"
                     android:background="@drawable/freelance_text"
-                    android:text="TextView"
+                    android:inputType="number"
+                    android:textColor="@color/white"
+
                     app:layout_constraintBottom_toBottomOf="@+id/Money_paid"
                     app:layout_constraintStart_toEndOf="@+id/Money_paid"
                     app:layout_constraintTop_toTopOf="@+id/Money_paid"
@@ -106,6 +109,33 @@
                     app:layout_constraintHorizontal_bias="0.497"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView32" />
+
+                <TextView
+                    android:id="@+id/textView29"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="9dp"
+                    android:text="/"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView32"
+                    app:layout_constraintStart_toEndOf="@+id/textView32"
+                    app:layout_constraintTop_toTopOf="@+id/textView32" />
+
+                <EditText
+                    android:id="@+id/textView"
+                    android:layout_width="65dp"
+                    android:layout_height="27dp"
+                    android:layout_marginStart="24dp"
+                    android:background="@drawable/freelance_text"
+                    android:inputType="number"
+
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView29"
+                    app:layout_constraintStart_toEndOf="@+id/textView32"
+                    app:layout_constraintTop_toTopOf="@+id/textView29"
+                    app:layout_constraintVertical_bias="0.0" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
