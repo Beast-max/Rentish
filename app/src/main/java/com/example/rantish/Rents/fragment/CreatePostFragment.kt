@@ -25,7 +25,7 @@ class CreatePostFragment : Fragment() {
         binding.button.setOnClickListener {
             viewModel.createPost(binding.editText.text.toString(),binding.disc.text.toString(),binding.textView32.text.toString().toInt(),binding.textView.text.toString().toInt())
 //            findNavController().popBackStack()
-            Toast.makeText(requireContext(),"PostCreated",Toast.LENGTH_LONG)
+            Toast.makeText(requireContext(),"PostCreated",Toast.LENGTH_LONG).show()
         }
         return binding.root
     }

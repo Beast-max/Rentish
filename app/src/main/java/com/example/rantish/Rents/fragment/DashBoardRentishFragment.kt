@@ -15,9 +15,10 @@ import com.example.rantish.viewmodel.MainViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class DashBoardRentishFragment : Fragment() {
+class DashBoardRentishFragment : Fragment(),PostAdapter.oclick {
     val viewModel:MainViewModel  by viewModels()
-    val adapter = PostAdapter()
+    val adapter = PostAdapter(this)
+
     private lateinit var binding:FragmentDashBoardRentishBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,6 +42,12 @@ class DashBoardRentishFragment : Fragment() {
         viewModel.getAll.observe(viewLifecycleOwner, Observer {
             adapter.submitList(it.data)
         })
+    }
+
+    override fun onclick(id: String) {
+        val bundle = Bundle()
+        bundle.putString("id",id)
+        findNavController().navigate(R.id.action_dashBoardRentishFragment_to_postViewFragment,bundle)
     }
 
 }

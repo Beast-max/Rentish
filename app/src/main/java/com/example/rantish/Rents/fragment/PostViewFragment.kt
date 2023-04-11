@@ -13,7 +13,7 @@ import com.example.rantish.viewmodel.MainViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class PostViewFragment : Fragment() {
+class PostViewFragment : Fragment(){
     private val id:String?  by lazy {
         arguments?.getString("id")
     }

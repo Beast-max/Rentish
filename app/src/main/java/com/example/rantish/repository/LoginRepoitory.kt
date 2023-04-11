@@ -47,7 +47,7 @@ class LoginRepoitory(
     }
 
     suspend fun getSignlePost(id: String):Response<GetSiglePostResponse>{
-        return loginService.getSinglePost(id,Token.token)
+        return loginService.getSinglePost(Token.token,id)
     }
 
     suspend fun getFreeLancer(token:String):Response<GetFreeLancerResponnse>{
